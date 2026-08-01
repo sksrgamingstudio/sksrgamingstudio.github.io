@@ -157,7 +157,7 @@ if(year){
     year.innerHTML =
     "© " +
     new Date().getFullYear() +
-    " SKSR GAMING STUDIO™";
+    " SKSR GAMING STUDIO™. All Rights Reserved.";
 
 
 }
