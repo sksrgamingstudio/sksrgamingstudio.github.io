@@ -478,9 +478,7 @@ footer {
         MOBILE
 ========================= */
 
-
 @media(max-width:850px){
-
 
     nav {
 
@@ -505,7 +503,6 @@ footer {
     }
 
 
-
     .hero p {
 
         font-size:18px;
@@ -513,21 +510,38 @@ footer {
     }
 
 
-
     .game-showcase {
 
         grid-template-columns:1fr;
 
+    }
 
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin-top: 35px;
 }
 
+
+/* =========================
+        HERO BUTTON SPACING
+========================= */
+
+.hero-buttons {
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
+
+}
+
+
 .hero-buttons .button {
-    margin: 0;
+
+    margin:0;
+
 }
