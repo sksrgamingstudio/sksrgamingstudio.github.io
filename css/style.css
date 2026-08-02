@@ -829,5 +829,31 @@ nav {
 }
 
 
+}
 
+/* =========================
+   MOBILE TAP EFFECT FIX
+========================= */
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+button,
+a {
+    transition:0.2s ease;
+    outline:none;
+}
+
+
+button:active,
+a:active {
+    transform:scale(0.95);
+}
+
+
+button:focus,
+a:focus {
+    outline:none;
 }
