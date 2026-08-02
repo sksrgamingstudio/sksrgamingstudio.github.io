@@ -226,7 +226,8 @@ section h2 {
 .about-card,
 .contact-card {
 
-    background:linear-gradient(
+    background:
+    linear-gradient(
         145deg,
         #111,
         #080808
@@ -238,22 +239,24 @@ section h2 {
 
     padding:35px;
 
-    transition:0.4s ease;
+    transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
 
 }
 
 
-//Reveal//
+/* =========================
+        SCROLL REVEAL
+========================= */
 
 .reveal {
 
     opacity:0;
 
-    transform:translateY(30px);
-
     transition:
-    opacity 0.5s ease,
-    transform 0.4s ease;
+    opacity 0.5s ease;
 
 }
 
@@ -262,187 +265,44 @@ section h2 {
 
     opacity:1;
 
-    transform:translateY(0);
-
 }
 
 
-.reveal.show:hover,
-.reveal.show:active {
 
-    transform:translateY(-10px);
-
-}
-
-
-/* Hover + tap */
+/* =========================
+        CARD FLOAT EFFECT
+========================= */
 
 .featured-card:hover,
 .game-card:hover,
 .about-card:hover,
-.contact-card:hover,
-.featured-card:active,
-.game-card:active,
-.about-card:active,
-.contact-card:active {
+.contact-card:hover {
 
     transform:translateY(-10px);
 
     border-color:#00eaff;
 
-    box-shadow:0 0 35px #00eaff55;
+    box-shadow:
+    0 0 35px #00eaff55;
 
 }
 
 
+/* Mobile tap effect */
 
+.featured-card:active,
+.game-card:active,
+.about-card:active,
+.contact-card:active {
 
-/* =========================
-        REVEAL ANIMATION
-========================= */
+    transform:translateY(-10px) scale(1.02);
 
+    border-color:#00eaff;
 
-.reveal {
-
-    opacity:0;
-
-    transform:translateY(30px);
-
-}
-
-
-.reveal.show {
-
-    opacity:1;
-
-    transform:translateY(0);
+    box-shadow:
+    0 0 35px #00eaff55;
 
 }
-
-
-
-/* =========================
-        FEATURES
-========================= */
-
-
-.features {
-
-    margin-top:25px;
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:15px;
-
-}
-
-
-.features span {
-
-    background:#111;
-
-    padding:10px 18px;
-
-    border-radius:20px;
-
-    color:#00eaff;
-
-}
-
-
-
-
-/* =========================
-        PROJECT INFO
-========================= */
-
-
-.project-info {
-
-    margin:25px 0;
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:15px;
-
-}
-
-
-.project-info p {
-
-    background:#111;
-
-    border:1px solid #222;
-
-    padding:10px 18px;
-
-    border-radius:20px;
-
-    color:#00eaff;
-
-}
-
-
-
-/* =========================
-        GAME PAGE
-========================= */
-
-
-.game-showcase {
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:50px;
-
-    align-items:center;
-
-}
-
-
-.game-image img {
-
-    width:100%;
-
-    border-radius:20px;
-
-}
-
-
-.game-info p {
-
-    color:#bbb;
-
-}
-
-
-.game-info ul {
-
-    list-style:none;
-
-    margin:25px 0;
-
-}
-
-
-.game-info li {
-
-    margin:10px 0;
-
-}
-
-
-.game-grid {
-
-    display:grid;
-
-    grid-template-columns:
     repeat(auto-fit,minmax(250px,1fr));
 
     gap:25px;
