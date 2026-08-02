@@ -831,27 +831,26 @@ nav {
 
 }
 
-/* Remove mobile blue effects */
+/* Remove mobile tap blue overlay */
 
-html {
-    -webkit-tap-highlight-color: transparent;
-}
-
+html,
+body,
 a,
 button,
 input,
-textarea {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-focus-ring-color: transparent;
-    outline: none;
-    user-select: none;
+textarea,
+select,
+img,
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
 }
 
 
 a:focus,
 button:focus,
 input:focus,
-textarea:focus {
-    outline: none;
-    box-shadow: none;
+textarea:focus,
+select:focus {
+    outline: none !important;
+    box-shadow: none !important;
 }
