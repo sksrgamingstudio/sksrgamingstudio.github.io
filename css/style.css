@@ -243,13 +243,17 @@ section h2 {
 }
 
 
-/* Reveal animation */
+//Reveal//
 
 .reveal {
 
     opacity:0;
 
     transform:translateY(30px);
+
+    transition:
+    opacity 0.5s ease,
+    transform 0.4s ease;
 
 }
 
@@ -259,6 +263,14 @@ section h2 {
     opacity:1;
 
     transform:translateY(0);
+
+}
+
+
+.reveal.show:hover,
+.reveal.show:active {
+
+    transform:translateY(-10px);
 
 }
 
