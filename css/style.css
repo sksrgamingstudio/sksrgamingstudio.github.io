@@ -225,195 +225,90 @@ section h2 {
 .game-card,
 .about-card,
 .contact-card {
-
-    background:
-    linear-gradient(
-        145deg,
-        #111,
-        #080808
-    );
-
-    border:1px solid #222;
-
-    border-radius:20px;
-
-    padding:35px;
-
+    background: linear-gradient(145deg, #111, #080808);
+    border: 1px solid #222;
+    border-radius: 20px;
+    padding: 35px;
     transition:
-    transform 0.4s ease,
-    border-color 0.4s ease,
-    box-shadow 0.4s ease;
-
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
-
-/* =========================
-        SCROLL REVEAL
-========================= */
-
+/* Keep reveal separate from float */
 .reveal {
-
-    opacity:0;
-
-    transition:
-    opacity 0.5s ease;
-
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
-
 
 .reveal.show {
-
-    opacity:1;
-
+    opacity: 1;
 }
 
-
-
-.featured-card:hover,
-.game-card:hover,
-.about-card:hover,
-.contact-card:hover {
-
+/* Float only for cards you marked as interactive */
+.interactive-card:hover {
     transform: translateY(-8px) scale(1.02);
-
-    border-color:#00eaff;
-
-    box-shadow:
-    0 10px 40px rgba(0,234,255,0.25);
-
+    border-color: #00eaff;
+    box-shadow: 0 10px 40px rgba(0, 234, 255, 0.25);
 }
 
-
-.featured-card:active,
-.game-card:active,
-.about-card:active,
-.contact-card:active {
-
+.interactive-card:active {
     transform: translateY(-4px) scale(0.98);
-
+    border-color: #00eaff;
+    box-shadow: 0 10px 40px rgba(0, 234, 255, 0.25);
 }
-
 
 
 /* =========================
-        LINKS
+        HERO BUTTONS
 ========================= */
 
-
-.game-card a {
-
-    color:#00eaff;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    display:inline-block;
-
-    margin-top:15px;
-
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 35px;
 }
 
-
-
-.game-card a:hover {
-
-    color:white;
-
+.hero-buttons .button {
+    margin: 0;
 }
-
-
-
-/* =========================
-        FOOTER
-========================= */
-
-
-footer {
-
-    background:#000;
-
-    padding:30px;
-
-    text-align:center;
-
-    color:#777;
-
-    border-top:1px solid #111;
-
-}
-
-
 
 
 /* =========================
         MOBILE
 ========================= */
 
-@media(max-width:850px){
-
+@media (max-width: 850px) {
     nav {
-
-        flex-direction:column;
-
-        padding:15px;
-
+        flex-direction: column;
+        padding: 15px;
     }
-
 
     .nav-links {
-
-        margin-top:10px;
-
+        margin-top: 10px;
     }
-
 
     .nav-links a {
-
-        margin:0 10px;
-
+        margin: 0 10px;
     }
-
 
     .hero p {
-
-        font-size:18px;
-
+        font-size: 18px;
     }
-
 
     .game-showcase {
-
-        grid-template-columns:1fr;
-
+        grid-template-columns: 1fr;
     }
 
-}
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-
-/* =========================
-        HERO BUTTON SPACING
-========================= */
-
-.hero-buttons {
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:25px;
-
-    flex-wrap:wrap;
-
-    margin-top:35px;
-
-}
-
-
-.hero-buttons .button {
-
-    margin:0;
-
+    .hero-buttons .button {
+        width: 250px;
+    }
 }
