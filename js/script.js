@@ -15,37 +15,27 @@ window.addEventListener("load", () => {
 
 
 
-
 // Smooth scrolling for internal links
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-
-    link.addEventListener("click", function(e){
-
+    link.addEventListener("click", function(e) {
 
         e.preventDefault();
 
-
-        const target =
-        document.querySelector(
-        this.getAttribute("href")
+        const target = document.querySelector(
+            this.getAttribute("href")
         );
 
-
-        if(target){
+        if (target) {
 
             target.scrollIntoView({
-
-                behavior:"smooth"
-
+                behavior: "smooth"
             });
 
         }
 
-
     });
-
 
 });
 
@@ -53,90 +43,61 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 
 
+// Scroll reveal animation
 
-// Card reveal animation
-
-
-const cards =
-document.querySelectorAll(
-".game-card, .about-card, .contact-card, .featured-card"
-);
+const revealElements = document.querySelectorAll(".reveal");
 
 
+const observer = new IntersectionObserver((entries) => {
 
-const observer =
-new IntersectionObserver((entries)=>{
+    entries.forEach(entry => {
 
+        if (entry.isIntersecting) {
 
-    entries.forEach(entry=>{
+            entry.target.classList.add("show");
 
-
-        if(entry.isIntersecting){
-
-
-            entry.target.classList.add(
-            "show"
-            );
-
+            observer.unobserve(entry.target);
 
         }
 
-
     });
 
+}, {
+    threshold: 0.15
+});
 
-},{
-    threshold:0.15
+
+
+revealElements.forEach(element => {
+
+    observer.observe(element);
+
 });
 
 
 
 
-cards.forEach(card=>{
 
 
-    observer.observe(card);
-
-
-});
-
-
-
-
-
-
-
-// Simple button click effect
-
+// Button click animation
 
 document.querySelectorAll("button")
-.forEach(button=>{
+.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        button.style.transform = "scale(0.95)";
 
 
-    button.addEventListener(
-    "click",
-    ()=>{
+        setTimeout(() => {
 
+            button.style.transform = "";
 
-        button.style.transform =
-        "scale(0.95)";
-
-
-        setTimeout(()=>{
-
-
-            button.style.transform =
-            "scale(1)";
-
-
-        },150);
-
+        }, 150);
 
     });
 
-
 });
-
 
 
 
@@ -145,19 +106,15 @@ document.querySelectorAll("button")
 
 // Dynamic copyright year
 
-
-const year =
+const copyright =
 document.querySelector("footer p");
 
 
+if (copyright) {
 
-if(year){
-
-
-    year.innerHTML =
+    copyright.innerHTML =
     "© " +
     new Date().getFullYear() +
     " SKSR GAMING STUDIO™. All Rights Reserved.";
-
 
 }
