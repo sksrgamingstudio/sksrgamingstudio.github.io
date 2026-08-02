@@ -518,7 +518,16 @@ footer {
 
         grid-template-columns:1fr;
 
-    }
 
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
 
+.hero-buttons .button {
+    margin: 0;
 }
