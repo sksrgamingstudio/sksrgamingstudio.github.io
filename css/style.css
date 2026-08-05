@@ -23,7 +23,7 @@ body {
         ),
         url("../images/Background/background.webp");
 
-    background-attachment: fixed;
+    background-attachment: scroll;
 
     background-size: cover;
 
@@ -60,15 +60,15 @@ nav h2 {
 }
 
 .brand {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
 .brand img {
-    width:70px;
-    height:auto;
+    width: 70px;
+    height: auto;
 }
 
 .nav-links a {
@@ -171,10 +171,10 @@ section h2 {
     transition: 0.4s;
 }
 
-.featured-card:hover,
-.game-card:hover,
-.about-card:hover,
-.contact-card:hover {
+.featured-card: hover,
+.game-card: hover,
+.about-card: hover,
+.contact-card: hover {
     transform: translateY(-10px);
     border-color: #00eaff;
     box-shadow: 0 0 35px #00eaff55;
