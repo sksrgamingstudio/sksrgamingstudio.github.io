@@ -182,39 +182,17 @@ section h2 {
     padding: 35px;
 
     transition: 0.3s ease;
-
-    /* Always visible subtle glow */
-    box-shadow:
-        0 0 20px rgba(0, 234, 255, 0.09);
 }
 
 
 /* =========================
-        DESKTOP HOVER
+        CARD INTERACTION
 ========================= */
 
-@media (hover: hover) {
-
-    .featured-card:hover,
-    .game-card:hover,
-    .about-card:hover,
-    .contact-card:hover {
-
-        transform: translateY(-10px);
-
-        border-color: #00eaff;
-
-        box-shadow:
-            0 0 25px rgba(0, 234, 255, 0.35),
-            0 0 60px rgba(0, 234, 255, 0.15);
-    }
-}
-
-
-/* =========================
-        MOBILE TAP
-========================= */
-
+.featured-card:hover,
+.game-card:hover,
+.about-card:hover,
+.contact-card:hover,
 .featured-card:active,
 .game-card:active,
 .about-card:active,
@@ -225,8 +203,10 @@ section h2 {
     border-color: #00eaff;
 
     box-shadow:
-        0 0 35px rgba(0, 234, 255, 0.4);
+        0 0 25px rgba(0, 234, 255, 0.35),
+        0 0 60px rgba(0, 234, 255, 0.15);
 }
+
 
 /* =========================
         FEATURES
