@@ -20,7 +20,9 @@ body {
     color: white;
     line-height: 1.6;
     overflow-x: hidden;
+    isolation: isolate;
 }
+
 
 body::before {
 
@@ -30,7 +32,10 @@ body::before {
 
     inset: 0;
 
-    background: url("../images/Background/background.webp") center / cover no-repeat;
+    background:
+        url("../images/Background/background.webp")
+        center / cover
+        no-repeat;
 
     filter: blur(10px);
 
@@ -38,24 +43,7 @@ body::before {
 
     opacity: 0.35;
 
-    z-index: 0;
-
-    pointer-events: none;
-
-}
-
-
-body::after {
-
-    content: "";
-
-    position: fixed;
-
-    inset: 0;
-
-    background: rgba(0, 0, 0, 0.45);
-
-    z-index: 1;
+    z-index: -1;
 
     pointer-events: none;
 
@@ -68,15 +56,6 @@ body > * {
 
     z-index: 2;
 
-}
-
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    z-index: -1;
-    pointer-events: none;
 }
 
 /* =========================
