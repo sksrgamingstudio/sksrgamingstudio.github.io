@@ -89,10 +89,13 @@ nav h2 {
     min-height: calc(100vh - 120px);
     display: flex;
     justify-content: center;
-    margin-top: -50;
     align-items: center;
     text-align: center;
 }
+
+.hero-small {
+    padding: 50px 0;
+    text-align: center;
 
 .hero-content {
     max-width: 900px;
