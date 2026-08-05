@@ -23,17 +23,23 @@ body {
         ),
         url("../images/Background/background.webp");
 
+    background-attachment: scroll;
+
     background-size: cover;
 
     background-position: center;
-
-    background-attachment: fixed;
 
     color: white;
 
     line-height: 1.6;
 
     overflow-x: hidden;
+
+@media (min-width: 1024px) {
+    body {
+        background-attachment: fixed;
+    }
+        
 
 }
         
@@ -96,6 +102,7 @@ nav h2 {
 .hero-small {
     padding: 50px 0;
     text-align: center;
+}
 
 .hero-content {
     max-width: 900px;
