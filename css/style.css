@@ -86,7 +86,7 @@ nav h2 {
 ========================= */
 
 .hero {
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 70px);
     display: flex;
     justify-content: center;
     align-items: center;
