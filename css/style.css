@@ -95,26 +95,23 @@ nav h2 {
 }
 
 .hero-small {
-    padding: 50px 0;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-content {
     max-width: 900px;
 }
 
-.hero h1 {
+.hero h1,
+.hero-small h1 {
     font-size: 70px;
     letter-spacing: 5px;
     color: white;
     text-shadow: 0 0 25px #00eaff;
-}
-
-.hero-small h1 {
-    min-height: calc(100vh - 120px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .hero p,
@@ -123,7 +120,6 @@ nav h2 {
     font-size: 22px;
     color: #ccc;
 }
-
 
 /* =========================
         BUTTONS
