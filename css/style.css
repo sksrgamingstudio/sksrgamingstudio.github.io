@@ -103,21 +103,19 @@ nav h2 {
     max-width: 900px;
 }
 
-.hero h1 {
+.hero h1,
+.hero-small h1 {
     font-size: 70px;
     letter-spacing: 5px;
     color: white;
     text-shadow: 0 0 25px #00eaff;
 }
 
-.hero p {
+.hero p,
+.hero-small p {
     margin: 30px auto;
     font-size: 22px;
     color: #ccc;
-}
-
-.hero-small {
-    text-shadow: 0 0 25px #00eaff;
 }
 
 
