@@ -14,47 +14,27 @@ html {
     scroll-behavior: smooth;
 }
 
+
 body {
-    position: relative;
-    background: #050505;
-    color: white;
-    line-height: 1.6;
-    overflow-x: hidden;
-    isolation: isolate;
-}
-
-
-body::before {
-
-    content: "";
-
-    position: fixed;
-
-    inset: 0;
 
     background:
-        url("../images/Background/background.webp")
-        center / cover
-        no-repeat;
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.85)
+        ),
+        url("../images/Background/background.webp");
 
-    filter: blur(10px);
+    background-size: cover;
 
-    transform: scale(1.08);
+    background-position: center;
 
-    opacity: 0.35;
+    background-attachment: fixed;
 
-    z-index: -1;
+    color: white;
 
-    pointer-events: none;
+    line-height: 1.6;
 
-}
-
-
-body > * {
-
-    position: relative;
-
-    z-index: 2;
+    overflow-x: hidden;
 
 }
 
