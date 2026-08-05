@@ -23,7 +23,7 @@ body {
         ),
         url("../images/Background/background.webp");
 
-    background-attachment: scroll;
+    background-attachment: fixed;
 
     background-size: cover;
 
