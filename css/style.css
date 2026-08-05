@@ -43,11 +43,10 @@ body {
 
 nav {
     width: 100%;
-    padding: 25px 8%;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
     top: 0;
     z-index: 100;
 }
@@ -60,15 +59,15 @@ nav h2 {
 }
 
 .brand {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:5px;
 }
 
 .brand img {
-    width: 50px;
-    height: 50px;
+    width:70px;
+    height:auto;
 }
 
 .nav-links a {
@@ -88,7 +87,6 @@ nav h2 {
 
 .hero {
     min-height: 100vh;
-    padding-top: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
