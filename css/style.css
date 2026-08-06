@@ -138,7 +138,9 @@ nav h2 {
 }
 
 .game-trailer iframe {
+    display: block;
     width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
     border: none;
     border-radius: 12px;
